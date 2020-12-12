@@ -37,3 +37,9 @@ services:
 | `-v /config` | Local Server configuration files |
 | `-v /data` | Local Server data |
 | `-v /ssl` | optional - for custom SSL certificates |
+
+## Support Info
+
+* Shell access whilst the container is running: `docker exec -it blynk-server /bin/bash`
+* To monitor the logs of the container in realtime: `docker logs -f blynk-server`
+
