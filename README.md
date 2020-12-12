@@ -1,12 +1,15 @@
-# Blynk server - Docker image
+# Blynk Server - Docker image
+This is a simple Docker implementation of local [blynk-server](https://github.com/blynkkk/blynk-server). The ambition is to have easy to use Docker image, which allows you to use your existing configuration files, data, certificates and send mail notifications. If you running this for very first time, default configuration files will be automatically created for you.
 
 ## Installation
 
 ### Docker
+
 ```
 $ docker run --name blynk-server -v /path-to-blynk-config:/config -v /path-to-blynk-data:/data -v /path-to-blynk-certificates:/ssl -p 8440:8440 -p 8080:8080 -p 9443:9443 -d blynk-server:latest
 ```
 ### Docker Compose
+
 ```
 version: "2.4"
 services:
@@ -25,4 +28,12 @@ services:
  ``` 
 ## Configuration
 ### configuration values
-### Environment variables
+
+| Parameter | Function |
+| :----: | --- |
+| `-p 8080` | plain TCP connection for hardware on the Local Server (no security) |
+| `-p 8440` | hardware mqtt port |
+| `-p 9443` | SSL/TLS connection for the Mobile Apps on the Local Server and hardware with SSL  |
+| `-v /config` | Local Server configuration files |
+| `-v /data` | Local Server data |
+| `-v /ssl` | optional - for custom SSL certificates |
