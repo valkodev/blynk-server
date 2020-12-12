@@ -6,7 +6,7 @@ This is a simple Docker implementation of local [blynk-server](https://github.co
 ### Docker
 
 ```
-$ docker run --name blynk-server -v /path-to-blynk-config:/config -v /path-to-blynk-data:/data -v /path-to-blynk-certificates:/ssl -p 8440:8440 -p 8080:8080 -p 9443:9443 -d blynk-server:latest
+$ docker run --name blynk-server -v /path-to-blynk-config:/config -v /path-to-blynk-data:/data -v /path-to-blynk-certificates:/ssl -p 8440:8440 -p 8080:8080 -p 9443:9443 -d valkodev/blynk-server:latest
 ```
 ### Docker Compose
 
@@ -14,7 +14,7 @@ $ docker run --name blynk-server -v /path-to-blynk-config:/config -v /path-to-bl
 version: "2.4"
 services:
   blynk-server:
-    image: blynk-server:latest
+    image: valkodev/blynk-server:latest
     container_name: blynk-server
     volumes:
       - /path-to-blynk-config:/config     # local server configuration files
