@@ -1,5 +1,5 @@
 # Blynk Server - Docker image
-This is a simple Docker implementation of local [blynk-server](https://github.com/blynkkk/blynk-server). The ambition is to have easy to use Docker image, which allows you to use your existing configuration files, data, certificates and send mail notifications. If you running this for very first time, default configuration files will be automatically created for you.
+This is a simple Docker implementation of local [blynk-server](https://github.com/blynkkk/blynk-server). The ambition is to have easy to use Docker image, which allows to use existing configuration files, data, certificates and send e-mail notifications. If you running this for very first time, default configuration files will be automatically created for you.
 
 ## Installation
 
@@ -10,7 +10,7 @@ $ docker run --name blynk-server -v /path-to-blynk-config:/config -v /path-to-bl
 ```
 ### Docker Compose
 
-```
+```yml
 version: "2.4"
 services:
   blynk-server:
