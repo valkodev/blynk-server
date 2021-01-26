@@ -3,7 +3,7 @@ FROM openjdk:11-jre
 MAINTAINER Radek Válko <rvalko@gmail.com>
 
 # Blynk Server JAR version
-ENV BLYNK_SERVER_VERSION 0.41.13
+ENV BLYNK_SERVER_VERSION 0.41.15
 
 #hardware mqtt port
 ENV HARDWARE_MQTT_PORT 8440
